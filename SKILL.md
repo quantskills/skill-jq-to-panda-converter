@@ -20,6 +20,17 @@ quantSkills:
   summary_en: Batch convert JoinQuant platform strategies to PandaAI-compatible code. Understands strategy intent rather than line-by-line translation, supports single file and batch directory conversion, produces runnable backtest configs with a summary report.
 ---
 
+```json qsh-form
+{
+  "version": 1,
+  "task": {
+    "placeholder": "请说明要转换的 JoinQuant 源文件、目录或文件清单，以及期望的输出位置",
+    "required": true
+  },
+  "prompt_template": "{{#task}}任务与材料：\n{{task}}\n\n{{/task}}{{#attachments}}用户上传的材料（已放入工作区）：\n{{attachments}}\n\n{{/attachments}}请读取并理解 JoinQuant 策略的信号、交易规则、调度、股票池与仓位逻辑，按策略类型选择 PandaAI Format A 或 Format B 做语义迁移；支持单文件或批量目录，验证信号与执行等价性，生成有效策略 JSON 和转换产物，输出中文报告。"
+}
+```
+
 # JoinQuant → PandaAI Strategy Converter
 
 Use this skill to migrate quantitative trading strategies from the JoinQuant (聚宽) platform to the PandaAI (盘达) platform. The conversion is **semantic** — it understands the original strategy's intent, signal logic, and trading rules, then rewrites them into PandaAI's configuration-driven format.
