@@ -7,7 +7,7 @@ quantSkills:
   repository_url: https://github.com/quantskills/skill-jq-to-panda-converter
   project_type: skill
   collection: strategy-tools
-  license: GPL-3.0
+  license: GPL-3.0-only
   category: tooling
   tags: [joinquant, jqdata, pandaAI, strategy-migration, strategy-conversion, code-translation, backtesting, batch]
   platforms: [claude-code, codex, openclaw]
