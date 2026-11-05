@@ -38,3 +38,6 @@ Research methodology tool. Does not guarantee identical backtest results between
 ## 📜 License
 
 GPL-3.0.
+
+
+Pandadata compatibility maintenance: [abgyjaguo](https://github.com/abgyjaguo). Existing authorship is retained.

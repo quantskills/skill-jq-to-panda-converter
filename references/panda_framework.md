@@ -96,7 +96,7 @@ def before_trading(context):
         symbols = list(context.today_dominant.values())
         if symbols:
             try:
-                mul_df = panda_data.get_future_list(
+                mul_df = panda_data.get_future_detail(
                     symbol=symbols, fields=["symbol", "contract_multiplier"]
                 )
                 if mul_df is not None and not mul_df.empty:
@@ -393,7 +393,7 @@ panda_data.get_future_dominant(
 )
 
 # 获取合约信息（含乘数）
-panda_data.get_future_list(
+panda_data.get_future_detail(
     symbol=['AU2601.SHF'],
     fields=['symbol', 'contract_multiplier']
 )
@@ -417,15 +417,10 @@ panda_data.get_factor(
 )
 
 # 获取股票详情
-panda_data.get_stock_detail(
-    symbol='',
-    fields=['symbol'],
-    market='cn',
-    status=1
-)
+panda_data.get_stock_detail(symbol='', fields=['symbol'], status=1)
 
 # 获取交易日历
-panda_data.get_trading_calendar(start_date, end_date)
+panda_data.get_trade_cal(start_date, end_date)
 ```
 
 ---
